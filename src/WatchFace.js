@@ -5,13 +5,20 @@ import './Watchface.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 export default class WatchFace extends Component {
-    get initialDate () {
+    get initialDate() {
         return {decimal: 0, binaryString: '0'};
     }
 
     constructor(props) {
         super(props);
-        this.state = {seconds: this.initialDate, minutes: this.initialDate, hours: this.initialDate, day: this.initialDate, month: this.initialDate, year: this.initialDate};
+        this.state = {
+            seconds: this.initialDate,
+            minutes: this.initialDate,
+            hours: this.initialDate,
+            day: this.initialDate,
+            month: this.initialDate,
+            year: this.initialDate
+        };
         const that = this;
         setInterval(() => {
             const date = new Date();
@@ -19,14 +26,14 @@ export default class WatchFace extends Component {
             const minutes = this.getBinaryAndDateValue(date.getMinutes());
             const hours = this.getBinaryAndDateValue(date.getHours());
             const day = this.getBinaryAndDateValue(date.getDate());
-            const month = this.getBinaryAndDateValue(date.getMonth());
+            const month = this.getBinaryAndDateValue(date.getMonth() + 1);
             const year = this.getBinaryAndDateValue(parseInt(date.getYear().toString().slice(-2)));
             that.setState({seconds, minutes, hours, day, month, year});
         }, 1000);
     }
 
-    getBinaryAndDateValue(valFromDate){
-        return{
+    getBinaryAndDateValue(valFromDate) {
+        return {
             decimal: valFromDate,
             binaryString: this.addZerosInTheLeft(valFromDate.toString(2))
         }
@@ -43,9 +50,9 @@ export default class WatchFace extends Component {
     render() {
         const headers = ['32', '16', '08', '04', '02', '01']
         return (
-            <div className='watchFace-bg'>
+            <div className=''>
                 {/*<div className=''>*/}
-                    {/*{headers.map(header => <h2 className='col-lg-2'>{header}</h2>)}*/}
+                {/*{headers.map(header => <h2 className='col-lg-2'>{header}</h2>)}*/}
                 {/*</div>*/}
                 <Row className='' rowTitle={'seconds'} noOfDots={6} date={this.state.seconds}/>
                 <Row className='' rowTitle={'minutes'} noOfDots={6} date={this.state.minutes}/>
