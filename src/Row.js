@@ -9,7 +9,7 @@ export default class Row extends Component {
         const values = this.props.date.binaryString.split('').map(i => i === '1');
         return (
             <div className='col-lg-12'>
-                <div className='Row col-lg-11'>
+                <div className='Row col-lg-10'>
                     {/*<h1 className="Row-title">{this.props.rowTitle}</h1>*/}
                     <Dot enabled={values[0]}/>
                     <Dot enabled={values[1]}/>
@@ -19,6 +19,7 @@ export default class Row extends Component {
                     <Dot enabled={values[5]}/>
                 </div>
                 <h1 className='col-lg-1'>{this.props.date.decimal}</h1>
+                <h1 className='col-lg-1'>{this.props.rowTitle}</h1>
             </div>
         )
     }

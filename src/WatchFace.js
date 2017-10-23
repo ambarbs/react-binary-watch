@@ -43,16 +43,16 @@ export default class WatchFace extends Component {
     render() {
         const headers = ['32', '16', '08', '04', '02', '01']
         return (
-            <div>
+            <div className='watchFace-bg'>
                 {/*<div className=''>*/}
                     {/*{headers.map(header => <h2 className='col-lg-2'>{header}</h2>)}*/}
                 {/*</div>*/}
-                <Row className='' rowTitle={'second'} noOfDots={6} date={this.state.seconds}/>
-                <Row className='' rowTitle={'minute'} noOfDots={6} date={this.state.minutes}/>
-                <Row className='' rowTitle={'hour'} noOfDots={6} date={this.state.hours}/>
-                <Row className='' rowTitle={'date'} noOfDots={6} date={this.state.day}/>
-                <Row className='' rowTitle={'month'} noOfDots={6} date={this.state.month}/>
-                <Row className='' rowTitle={'year'} noOfDots={6} date={this.state.year}/>
+                <Row className='' rowTitle={'seconds'} noOfDots={6} date={this.state.seconds}/>
+                <Row className='' rowTitle={'minutes'} noOfDots={6} date={this.state.minutes}/>
+                <Row className='' rowTitle={'hours'} noOfDots={6} date={this.state.hours}/>
+                <Row className='' rowTitle={'days'} noOfDots={6} date={this.state.day}/>
+                <Row className='' rowTitle={'months'} noOfDots={6} date={this.state.month}/>
+                <Row className='' rowTitle={'years'} noOfDots={6} date={this.state.year}/>
             </div>
         )
     }

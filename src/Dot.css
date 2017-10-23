@@ -10,11 +10,11 @@
 
 .Dot-disabled {
     border:4px solid greenyellow;
-    background-color: #222222;
+    background-color: darkblue;
 }
 
 .Dot-enabled {
-    border: 4px solid  #222222;
+    border: 4px solid  darkblue;
     background-color:greenyellow;
 }
 
@@ -29,4 +29,12 @@
     background: #38a9e4;
     color: white;
     font-family: Helvetica, Arial Black, sans;
+}
+
+.dot-false-text{
+    color: greenyellow;
+}
+
+.dot-true-text{
+    color: darkblue;
 }
