@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import './Dot.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import {RadioButton} from 'material-ui/RadioButton';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
 export default class Dot extends Component {
@@ -10,20 +8,7 @@ export default class Dot extends Component {
         let className = this.props.enabled ? 'Dot-enabled' : 'Dot-disabled';
         className = 'Dot ' + className + ' ';
         return (
-            <div className={className}>
-
-            </div>
+            <div className={className}/>
         )
-    }
-
-    get styles() {
-        return {
-            block: {
-                maxWidth: 250,
-            },
-            radioButton: {
-                marginBottom: 16,
-            },
-        }
     }
 }

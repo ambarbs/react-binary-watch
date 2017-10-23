@@ -1,8 +1,18 @@
 .Row{
-    border:4px solid black;
+    /*border:4px solid black;*/
     height: 100px;
     width: 700px;
     margin: 10px;
     text-align:center;
     position:relative;
+    /*display: inline-flex;*/
+}
+
+.Test-row{
+    /*display: flex;*/
+}
+
+.row-header{
+    display: flex;
+    padding-left: 50px;
 }
