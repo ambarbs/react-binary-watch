@@ -1,0 +1,8 @@
+.Row{
+    border:4px solid black;
+    height: 100px;
+    width: 700px;
+    margin: 10px;
+    text-align:center;
+    position:relative;
+}
