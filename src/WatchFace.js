@@ -35,11 +35,11 @@ export default class WatchFace extends Component {
     getBinaryAndDateValue(valFromDate) {
         return {
             decimal: valFromDate,
-            binaryString: this.addZerosInTheLeft(valFromDate.toString(2))
+            binaryString: this.addZerosToLeft(valFromDate.toString(2))
         }
     }
 
-    addZerosInTheLeft(binaryString) {
+    addZerosToLeft(binaryString) {
         const diff = 6 - binaryString.length;
         for (let i = 0; i < diff; i++) {
             binaryString = '0' + binaryString;
@@ -48,9 +48,9 @@ export default class WatchFace extends Component {
     }
 
     render() {
-        const headers = ['32', '16', '08', '04', '02', '01']
+        const headers = ['32', '16', '08', '04', '02', '01'];
         return (
-            <div className=''>
+            <div className='container'>
                 {/*<div className=''>*/}
                 {/*{headers.map(header => <h2 className='col-lg-2'>{header}</h2>)}*/}
                 {/*</div>*/}

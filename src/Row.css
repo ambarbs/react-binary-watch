@@ -16,3 +16,7 @@
     display: flex;
     padding-left: 50px;
 }
+
+.row-time-values{
+    margin-top: calc(100vw/24);
+}

@@ -8,10 +8,10 @@ export default class Dot extends Component {
         let className = this.props.enabled ? 'Dot-enabled' : 'Dot-disabled';
         const textColor = this.props.enabled ? 'dot-true-text' : 'dot-false-text';
         const oneOrZero = this.props.enabled ? '1' : '0';
-        className = 'Dot ' + className + ' ';
+        className = 'Dot ' + className + ' col-xs-2';
         return (
             <div className={className}>
-                <h2 className={textColor}>{oneOrZero}</h2>
+                <div className={textColor}>{oneOrZero}</div>
             </div>
         )
     }

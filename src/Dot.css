@@ -1,8 +1,10 @@
 .Dot {
     border:4px solid red;
-    height: 70px;
-    width: 70px;
-    border-radius: 40px;
+    height: calc(100vw/12);
+    width: calc(100vw/12);
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 50%;
     position:relative;
     margin:10px auto;
     display:inline-block;
@@ -33,8 +35,10 @@
 
 .dot-false-text{
     color: greenyellow;
+    font-size: 3vw
 }
 
 .dot-true-text{
     color: darkblue;
+    font-size: 3vw
 }
