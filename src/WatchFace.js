@@ -50,16 +50,22 @@ export default class WatchFace extends Component {
     render() {
         const headers = ['32', '16', '08', '04', '02', '01'];
         return (
-            <div className='container'>
-                {/*<div className=''>*/}
-                {/*{headers.map(header => <h2 className='col-lg-2'>{header}</h2>)}*/}
-                {/*</div>*/}
-                <Row className='' rowTitle={'seconds'} noOfDots={6} date={this.state.seconds}/>
-                <Row className='' rowTitle={'minutes'} noOfDots={6} date={this.state.minutes}/>
-                <Row className='' rowTitle={'hours'} noOfDots={6} date={this.state.hours}/>
-                <Row className='' rowTitle={'days'} noOfDots={6} date={this.state.day}/>
-                <Row className='' rowTitle={'months'} noOfDots={6} date={this.state.month}/>
-                <Row className='' rowTitle={'years'} noOfDots={6} date={this.state.year}/>
+            <div className='watchFace-gradient'>
+                <div className='container'>
+                    {/*<div className=''>*/}
+                    <div className=' col-xs-8'>
+                        <div className='row'>
+                            {headers.map(header => <h4 className='col-lg-2 watchface-row-header'>{header}</h4>)}
+                        </div>
+                    </div>
+                    {/*</div>*/}
+                    <Row className='' rowTitle={'seconds'} noOfDots={6} date={this.state.seconds}/>
+                    <Row className='' rowTitle={'minutes'} noOfDots={6} date={this.state.minutes}/>
+                    <Row className='' rowTitle={'hours'} noOfDots={6} date={this.state.hours}/>
+                    <Row className='' rowTitle={'days'} noOfDots={6} date={this.state.day}/>
+                    <Row className='' rowTitle={'months'} noOfDots={6} date={this.state.month}/>
+                    <Row className='' rowTitle={'years'} noOfDots={6} date={this.state.year}/>
+                </div>
             </div>
         )
     }
