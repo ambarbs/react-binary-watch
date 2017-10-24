@@ -35,7 +35,7 @@ export default class WatchFace extends Component {
     getBinaryAndDateValue(valFromDate) {
         return {
             decimal: ('0' + valFromDate).slice(-2),
-            binaryString: ('00000' + valFromDate.toString(2)).slice(-5)
+            binaryString: ('00000' + valFromDate.toString(2)).slice(-6)
         }
     }
 
