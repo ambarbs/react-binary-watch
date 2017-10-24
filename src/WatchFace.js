@@ -27,7 +27,7 @@ export default class WatchFace extends Component {
             const hours = this.getBinaryAndDateValue(date.getHours());
             const day = this.getBinaryAndDateValue(date.getDate());
             const month = this.getBinaryAndDateValue(date.getMonth() + 1);
-            const year = this.getBinaryAndDateValue(parseInt(date.getYear().toString().slice(-2)));
+            const year = this.getBinaryAndDateValue(parseInt(date.getYear().toString().slice(-2), 10));
             that.setState({seconds, minutes, hours, day, month, year});
         }, 1000);
     }
@@ -55,7 +55,7 @@ export default class WatchFace extends Component {
                     {/*<div className=''>*/}
                     <div className=' col-xs-8'>
                         <div className='row'>
-                            {headers.map(header => <h4 className='col-lg-2 watchface-row-header'>{header}</h4>)}
+                            {headers.map((header, key) => <h4 key={key} className='col-xs-2 watchface-row-header'>{header}</h4>)}
                         </div>
                     </div>
                     {/*</div>*/}

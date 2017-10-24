@@ -10,7 +10,7 @@ export default class Row extends Component {
         const values = this.props.date.binaryString.split('').map(i => i === '1');
         return (
             <div className='row'>
-                <div className=' col-xs-8'>
+                <div className='col-xs-8'>
                     <div className='row'>
                         {/*<h1 className="Row-title">{this.props.rowTitle}</h1>*/}
                         <Dot enabled={values[0]}/>

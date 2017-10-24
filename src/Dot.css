@@ -6,19 +6,19 @@
     max-width: 100%;
     border-radius: 50%;
     position:relative;
-    margin:10px auto;
-    display:inline-block;
+    margin:5px auto;
+    /*display:inline-block;*/
     line-height: calc(100vw/15);
     text-align: center;
 }
 
-/*.gradient-true {*/
-    /*background-image:*/
-            /*linear-gradient(*/
-                    /*to right,*/
-                    /*#fffc00, #ffffff*/
-            /*);*/
-/*}*/
+.gradient-true {
+    background-image:
+            linear-gradient(
+                    to right,
+                    greenyellow, #1dff28
+            );
+}
 
 .gradient-false {
     background-image:

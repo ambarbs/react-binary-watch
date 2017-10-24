@@ -7,15 +7,16 @@
     background-image:
             linear-gradient(
                     to right,
-                    #606c88, #3f4c6b
+                    #567f88, #435e6b, #3f4c6b
             );
+    /*height: 100vw;*/
 }
 
 .watchface-row-header{
     /*margin-top: calc(100vw/24);*/
     font-family: Helvetica, Arial Black, sans;
     /*font-size: large;*/
-    color: lightblue;
+    color: #d3e6e4;
 }
 
 .watchFace-circle{
