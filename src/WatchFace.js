@@ -44,7 +44,6 @@ export default class WatchFace extends Component {
         return (
             <div className='watchFace-gradient'>
                 <div className='container'>
-                    {/*<div className=''>*/}
                     <div className=' col-xs-8'>
                         <div className='row'>
                             {headers.map((header, key) => <h4 key={key} className='col-xs-2 watchface-row-header'>{header}</h4>)}
