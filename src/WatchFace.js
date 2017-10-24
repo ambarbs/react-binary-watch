@@ -34,17 +34,9 @@ export default class WatchFace extends Component {
 
     getBinaryAndDateValue(valFromDate) {
         return {
-            decimal: valFromDate,
-            binaryString: this.addZerosToLeft(valFromDate.toString(2))
+            decimal: ('0' + valFromDate).slice(-2),
+            binaryString: ('00000' + valFromDate.toString(2)).slice(-5)
         }
-    }
-
-    addZerosToLeft(binaryString) {
-        const diff = 6 - binaryString.length;
-        for (let i = 0; i < diff; i++) {
-            binaryString = '0' + binaryString;
-        }
-        return binaryString;
     }
 
     render() {
@@ -58,7 +50,6 @@ export default class WatchFace extends Component {
                             {headers.map((header, key) => <h4 key={key} className='col-xs-2 watchface-row-header'>{header}</h4>)}
                         </div>
                     </div>
-                    {/*</div>*/}
                     <Row className='' rowTitle={'seconds'} noOfDots={6} date={this.state.seconds}/>
                     <Row className='' rowTitle={'minutes'} noOfDots={6} date={this.state.minutes}/>
                     <Row className='' rowTitle={'hours'} noOfDots={6} date={this.state.hours}/>
