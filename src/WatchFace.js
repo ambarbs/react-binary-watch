@@ -5,20 +5,21 @@ import './Watchface.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 export default class WatchFace extends Component {
-    get initialDate() {
+    static get initialDate() {
         return {decimal: 0, binaryString: '000000'};
+    }
+
+    static get stateKeys(){
+        return ['seconds', 'minutes', 'hours', 'day', 'month', 'year']
     }
 
     constructor(props) {
         super(props);
-        this.state = {
-            seconds: this.initialDate,
-            minutes: this.initialDate,
-            hours: this.initialDate,
-            day: this.initialDate,
-            month: this.initialDate,
-            year: this.initialDate
-        };
+        let states = {};
+        WatchFace.stateKeys.forEach( key => {
+            states[key] = WatchFace.initialDate;
+        });
+        this.state = states;
         const that = this;
         setInterval(() => {
             const date = new Date();

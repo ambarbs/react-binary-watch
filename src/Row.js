@@ -12,8 +12,8 @@ export default class Row extends Component {
             <div className='row'>
                 <div className='col-xs-8'>
                     <div className='row'>
-                        {values.map(value =>
-                            <Dot enabled={value}/>
+                        {values.map((value, key) =>
+                            <Dot key={key} enabled={value}/>
                         )}
                     </div>
                 </div>
