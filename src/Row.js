@@ -12,12 +12,9 @@ export default class Row extends Component {
             <div className='row'>
                 <div className='col-xs-8'>
                     <div className='row'>
-                        <Dot enabled={values[0]}/>
-                        <Dot enabled={values[1]}/>
-                        <Dot enabled={values[2]}/>
-                        <Dot enabled={values[3]}/>
-                        <Dot enabled={values[4]}/>
-                        <Dot enabled={values[5]}/>
+                        {values.map(value =>
+                            <Dot enabled={value}/>
+                        )}
                     </div>
                 </div>
                 <div className='col-xs-offset-1 col-xs-3'>

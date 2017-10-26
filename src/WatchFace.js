@@ -6,7 +6,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 export default class WatchFace extends Component {
     get initialDate() {
-        return {decimal: 0, binaryString: '0'};
+        return {decimal: 0, binaryString: '000000'};
     }
 
     constructor(props) {
@@ -46,15 +46,14 @@ export default class WatchFace extends Component {
                 <div className='container'>
                     <div className=' col-xs-8'>
                         <div className='row'>
-                            {headers.map((header, key) => <h4 key={key} className='col-xs-2 watchface-row-header'>{header}</h4>)}
+                            {headers.map((header, key) =>
+                                <h4 key={key} className='col-xs-2 watchface-row-header'>{header}</h4>
+                            )}
                         </div>
                     </div>
-                    <Row className='' rowTitle={'seconds'} noOfDots={6} date={this.state.seconds}/>
-                    <Row className='' rowTitle={'minutes'} noOfDots={6} date={this.state.minutes}/>
-                    <Row className='' rowTitle={'hours'} noOfDots={6} date={this.state.hours}/>
-                    <Row className='' rowTitle={'days'} noOfDots={6} date={this.state.day}/>
-                    <Row className='' rowTitle={'months'} noOfDots={6} date={this.state.month}/>
-                    <Row className='' rowTitle={'years'} noOfDots={6} date={this.state.year}/>
+                    {Object.entries(this.state).map(item =>
+                        <Row key={item[0]} rowTitle={item[0]} date={item[1]}/>
+                    )}
                 </div>
             </div>
         )
