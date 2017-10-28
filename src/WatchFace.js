@@ -10,7 +10,7 @@ export default class WatchFace extends Component {
     }
 
     static get stateKeys(){
-        return ['seconds', 'minutes', 'hours', 'day', 'month', 'year']
+        return ['seconds', 'minutes', 'hours', 'days', 'months', 'years'];
     }
 
     constructor(props) {
