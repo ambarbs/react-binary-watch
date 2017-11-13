@@ -26,10 +26,10 @@ export default class WatchFace extends Component {
             const seconds = this.getBinaryAndDateValue(date.getSeconds());
             const minutes = this.getBinaryAndDateValue(date.getMinutes());
             const hours = this.getBinaryAndDateValue(date.getHours());
-            const day = this.getBinaryAndDateValue(date.getDate());
-            const month = this.getBinaryAndDateValue(date.getMonth() + 1);
-            const year = this.getBinaryAndDateValue(parseInt(date.getYear().toString().slice(-2), 10));
-            that.setState({seconds, minutes, hours, day, month, year});
+            const days = this.getBinaryAndDateValue(date.getDate());
+            const months = this.getBinaryAndDateValue(date.getMonth() + 1);
+            const years = this.getBinaryAndDateValue(parseInt(date.getYear().toString().slice(-2), 10));
+            that.setState({seconds, minutes, hours, days, months, years});
         }, 1000);
     }
 
