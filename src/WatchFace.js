@@ -40,8 +40,10 @@ export default class WatchFace extends Component {
         }
     }
 
+
     render() {
         const headers = ['32', '16', '08', '04', '02', '01'];
+
         return (
             <div className='watchFace-gradient'>
                 <div className='container'>
