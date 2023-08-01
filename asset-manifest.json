@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-binary-watch/static/css/main.75b7a20a.css",
+    "main.js": "/react-binary-watch/static/js/main.228ede97.js",
+    "static/media/glyphicons-halflings-regular.svg": "/react-binary-watch/static/media/glyphicons-halflings-regular.060b2710bdbbe3dfe48b.svg",
+    "static/media/glyphicons-halflings-regular.ttf": "/react-binary-watch/static/media/glyphicons-halflings-regular.4692b9ec53fd5972caa2.ttf",
+    "static/media/glyphicons-halflings-regular.woff": "/react-binary-watch/static/media/glyphicons-halflings-regular.82b1212e45a2bc35dd73.woff",
+    "static/media/glyphicons-halflings-regular.eot": "/react-binary-watch/static/media/glyphicons-halflings-regular.5be1347c682810f199c7.eot",
+    "static/media/glyphicons-halflings-regular.woff2": "/react-binary-watch/static/media/glyphicons-halflings-regular.be810be3a3e14c682a25.woff2",
+    "index.html": "/react-binary-watch/index.html",
+    "main.75b7a20a.css.map": "/react-binary-watch/static/css/main.75b7a20a.css.map",
+    "main.228ede97.js.map": "/react-binary-watch/static/js/main.228ede97.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75b7a20a.css",
+    "static/js/main.228ede97.js"
+  ]
+}
